@@ -1,0 +1,21 @@
+[data-md-color-scheme="bdvm-light"] {
+  --md-primary-fg-color: #17354d;
+  --md-primary-fg-color--light: #285777;
+  --md-primary-fg-color--dark: #0b2438;
+  --md-accent-fg-color: #d86f24;
+  --md-default-bg-color: #f5f7f8;
+}
+
+:root {
+  --md-text-font: "Segoe UI", system-ui, sans-serif;
+  --md-code-font: "Cascadia Code", "SFMono-Regular", monospace;
+}
+
+.md-header { border-bottom: 3px solid #d86f24; }
+.md-typeset h1 { font-weight: 750; letter-spacing: -.025em; }
+.md-typeset h2 { border-bottom: 1px solid color-mix(in srgb, currentColor 18%, transparent); padding-bottom: .25rem; }
+.md-typeset table:not([class]) { border-radius: .35rem; overflow: hidden; }
+.bdvm-status { display: grid; grid-template-columns: repeat(auto-fit,minmax(10rem,1fr)); gap: .75rem; margin: 1.25rem 0; }
+.bdvm-status > div { border-left: .25rem solid #d86f24; background: color-mix(in srgb, var(--md-default-fg-color) 5%, transparent); padding: .8rem 1rem; border-radius: .2rem; }
+.bdvm-status strong { display: block; font-size: 1.35rem; }
+
