@@ -1,8 +1,6 @@
 # BDVM.Web
 
-[Repository](https://github.com/Bunchyearth23/bdvm-web) · Version 1.2.0 · Dépendances : Common, Core
+[Repository](https://github.com/Bunchyearth23/bdvm-web) · 1.2.0 · Requires Common and Core
 
-Web est la plateforme d’interface extensible. `IBdvmWebModule` permet à Dispatch et Management d’enregistrer routes, navigation et vues séparées. Web transporte snapshots et intentions ; il ne calcule aucun solde, prix, owner ou droit.
-
-Le frontend traite tous les labels externes comme texte inerte et transmet version attendue, acteur et idempotency key aux commandes.
+An extensible interface platform. `IBdvmWebModule` lets Dispatch and Management register separate routes, navigation, and views. Web transports authoritative snapshots and versioned intents; it never calculates balances, prices, ownership, or permissions.
 

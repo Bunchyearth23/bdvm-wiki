@@ -1,23 +1,16 @@
 # Architecture
 
-BDVM sépare le domaine, l’orchestration, les adapters Unity, les transports et les interfaces. `Common` définit les contrats. `Core` compose lifecycle, command bus, registry et checkpoint. Les modules fonctionnels portent les règles métier. Les bridges isolent les APIs tierces.
+BDVM separates domain rules, orchestration, Unity adapters, transports, and interfaces. Common defines contracts; Core provides lifecycle, registry, command bus, checkpoints, and migrations; feature modules own business rules; bridges isolate third-party APIs.
 
 ```text
-Interfaces in-game / Web
-          │ intentions et snapshots
-     Core + Common
-          │ ports versionnés
- Companies ─ Fleet ─ Market ─ Operations ─ Passengers
-          │
- Bridges optionnels
- Multiplayer / SelfShunt / PassengerJobs / Remote Dispatch
+In-game UI / Web UI
+       │ intents and snapshots
+   Core + Common
+       │ versioned ports
+Companies ─ Fleet ─ Market ─ Operations ─ Passengers
+       │
+Optional bridges: Multiplayer / SelfShunt / PassengerJobs / Remote Dispatch
 ```
 
-## Invariants
-
-- Graphe de dépendances acyclique.
-- Aucun type Unity, UMM, Harmony ou mod tiers dans le domaine.
-- Routes, protocoles, schemas et capabilities sont versionnés.
-- Collision d’ID, cycle, capability absente ou version incompatible : refus explicite.
-- Le state d’un module absent est conservé sans migration implicite.
+The dependency graph is acyclic. Domain code contains no Unity, UMM, Harmony, or third-party mod type. Route IDs, schemas, protocols, and capabilities are versioned. Duplicate IDs, cycles, missing capabilities, and incompatible versions are explicit failures. Missing-module state is retained without invented migration.
 

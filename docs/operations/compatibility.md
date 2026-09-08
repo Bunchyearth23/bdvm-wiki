@@ -1,19 +1,8 @@
-# Compatibilité
+# Compatibility
 
-## Matrice de principe
+Same-major upgrades and downgrades are accepted only when declared. Unsupported majors fail closed. A missing module retains opaque state and suspends its workflows; reinstalling a compatible module restores it. Duplicate assemblies, module IDs, or routes are rejected.
 
-- Même major de contracts et protocoles : upgrade/downgrade seulement si déclaré.
-- Major différente : refus.
-- Module absent : payload conservé, workflows suspendus.
-- Module réinstallé compatible : state restauré.
-- Doublon d’assembly, route ou module ID : refus.
-- Ancien package DVCompany monolithique : aucune façade ni import automatique.
+Strict mode requires a new non-tutorial career or an already compatible BDVM checkpoint. Until a release explicitly guarantees migration, use disposable saves.
 
-## Saves
-
-La candidate stricte nécessite une nouvelle carrière non tutorielle ou une save portant déjà un checkpoint BDVM compatible. Les tests doivent utiliser des saves jetables jusqu’à publication d’une garantie de migration.
-
-## Mods de contenu
-
-BDVM identifie les véhicules par `CarGUID`, pas par leur livery. Les locomotives et wagons tiers nécessitent néanmoins une validation physique : spawn, couplage, réparation, coût, sauvegarde et Multiplayer.
+Content mods are identified through stable `CarGUID` records rather than liveries, but each locomotive and wagon still needs physical validation for spawn, coupling, service, save/reload, and Multiplayer.
 

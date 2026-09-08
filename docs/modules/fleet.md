@@ -1,8 +1,6 @@
 # BDVM.Fleet
 
-[Repository](https://github.com/Bunchyearth23/bdvm-fleet) · Version 1.3.0 · Dépendances : Common, Companies
+[Repository](https://github.com/Bunchyearth23/bdvm-fleet) · 1.3.0 · Requires Common and Companies
 
-Fleet porte l’identité `CarGUID`, l’owner, l’operator, les bundles, états de service, réservations et politique de population physique. Il protège les actifs économiques contre le cleanup sans adopter les véhicules marchands ou AI Traffic.
-
-Fleet ne décide pas les prix et ne spawn aucun GameObject seul : les adapters Unity effectuent les transitions physiques autorisées.
+Owns `CarGUID` identity, owner/operator records, bundles, service state, reservations, and physical population policy. It protects exact economic assets from cleanup without adopting merchant or AI Traffic vehicles. Unity adapters perform physical transitions.
 

@@ -1,15 +1,8 @@
-# Multiplayer et autorité
+# Multiplayer authority
 
-L’hôte est l’unique autorité économique. Les clients envoient des intentions bornées contenant identité, version attendue et idempotency key. L’hôte recalcule permissions, prix, ownership et transition avant toute mutation.
+The host is the only economic authority. Clients send bounded intents containing identity, expected version, and an idempotency key. The host recalculates permissions, price, ownership, and transition before mutation.
 
-## Synchronisation
+The protocol provides persistent identity independent of network address, initial snapshots for late join, replay-safe commands, disk checkpoints, crash recovery, and explicit rejection of incompatible schemas. A client UI becomes read-only whenever authority cannot be proven.
 
-- Identité persistante indépendante de l’adresse réseau.
-- Snapshot initial pour late join.
-- Commandes rejouables sans double effet.
-- Checkpoint disque et récupération après crash.
-- Refus de protocoles ou schemas incompatibles.
-- UI client en lecture seule lorsque l’autorité ne peut pas être prouvée.
-
-Le serveur dédié est prévu après les jalons principaux. La candidate actuelle fonctionne en solo ou avec un joueur hôte.
+A real dedicated server is planned after the main milestones. The current candidate supports solo play and player-hosted sessions.
 

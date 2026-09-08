@@ -1,34 +1,30 @@
 # FAQ
 
-## BDVM veut dire quoi ?
+## What does BDVM mean?
 
 **Bunchy's Derail Valley Mods**.
 
-## Full contient-il les mods tiers ?
+## Does Full contain third-party mods?
 
-Non. Full compose les modules BDVM. Multiplayer, SelfShunt, PassengerJobs, RemoteDispatchLive et leurs APIs/dépendances doivent provenir des packages de forks compatibles.
+No. Full composes BDVM modules. Compatible Multiplayer, SelfShunt, PassengerJobs, RemoteDispatchLive, APIs, and transitive dependencies are installed separately.
 
-## PassengerJobs est-il requis pour BDVM.Passengers ?
+## Does BDVM.Passengers require PassengerJobs?
 
-Non. Passengers est un domaine indépendant. PassengerJobs est requis uniquement pour le bridge jouable actuel.
+No. Passengers is independent. PassengerJobs is required only by the current playable bridge.
 
-## Peut-on utiliser BDVM sur une save vanilla existante ?
+## Can strict mode use an existing vanilla career?
 
-Pas en mode strict. La candidate refuse volontairement le tutoriel et les saves sans checkpoint BDVM afin d’éviter une adoption incohérente du matériel existant.
+No. It intentionally refuses unsupported careers to avoid silently adopting naturally generated rolling stock.
 
-## Pourquoi les contrats ne fournissent-ils pas les wagons ?
+## Why do contracts not provide wagons?
 
-Parce que cela supprimerait l’intérêt économique d’acheter ou louer du matériel. Les contrats fournissent du cargo et une rémunération ; l’operator fournit la rame.
+Free contract consists would remove the economic purpose of buying or leasing equipment. Contracts provide cargo and rewards; operators provide rolling stock.
 
-## Pourquoi l’interface Web ne peut-elle pas modifier directement un solde ?
+## Why can the Web UI not set a balance directly?
 
-Parce que seul l’hôte possède l’autorité. Le browser envoie une intention ; l’hôte vérifie acteur, permission, version, prix et transition.
+Only the host is authoritative. The browser sends an intent; the host verifies actor, permission, version, price, and transition.
 
-## Le serveur dédié est-il disponible ?
+## Is a dedicated server available?
 
-Pas encore. L’architecture headless existe, mais le runtime dédié réel est différé.
-
-## Où signaler un problème ?
-
-Dans le repository du module concerné, avec `Player.log`, correlation ID, versions, hashes, rôle host/client et étapes exactes.
+Not yet. Headless architecture exists, but the real dedicated runtime is deferred.
 

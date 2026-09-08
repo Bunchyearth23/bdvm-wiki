@@ -1,20 +1,6 @@
-# Interfaces en jeu et Web
+# In-game and Web interfaces
 
-## Interface en jeu
+In-game, `Alt` enters mouse mode and `F7` toggles BDVM. The persistent button sits at the top right. While the window is open, clicks, levers, coupling, and other world interactions must be blocked.
 
-- `Alt` active le mouse mode.
-- `F7` affiche ou masque BDVM uniquement dans ce mode.
-- Le bouton persistant est placé en haut à droite.
-- La fenêtre bloque clics, leviers, attelages et interactions avec le monde.
-
-Cette interface reste un fallback compact pour diagnostics et opérations principales.
-
-## Interface Web
-
-Web charge deux modules :
-
-- **Dispatch** pour topologie, trains, voies, aiguillages, signaux et occupations ;
-- **Management** pour wallets, compagnies, flotte, marché, locations, contrats, voyageurs, industrie et triage.
-
-Le browser n’est jamais une autorité. Chaque mutation est une intention authentifiée et validée sur le main thread de l’hôte. Les labels venant du jeu sont rendus comme texte inerte.
+Web loads **Dispatch** for railway topology and **Management** for companies, wallets, fleet, market, leases, contracts, passengers, industry, and planning. The browser is never authoritative: it renders snapshots and sends authenticated intents for host validation on Unity's main thread. Untrusted game labels are rendered as inert text.
 

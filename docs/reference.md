@@ -1,28 +1,21 @@
-# Décisions et limites
+# Decisions and limits
 
-## Décisions établies
+## Established decisions
 
-- Plusieurs compagnies peuvent coexister dans une partie.
-- Un joueur possède un wallet personnel et peut être indépendant.
-- Une compagnie démarre à zéro et sa création est gratuite.
-- Invitation/candidature par défaut, configurable.
-- Le chef délègue les permissions sensibles.
-- Vente à 50 % en parfait état, dégressive linéairement jusqu’à 15 %.
-- La dissolution annule contrats, vend actifs, déduit dettes/pénalités puis distribue le positif également.
-- Placement initial uniquement en dépôt ou rail de service.
-- Achat locomotive + matériel remorqué possible comme bundle atomique.
-- Pas de conducteur IA recrutable.
-- Serveur dédié différé après les jalons principaux.
-- Licences transformées en coûts économiques plutôt qu’en hard gates.
+- Multiple companies may coexist in one session.
+- Every player has a personal wallet and may remain independent.
+- Company creation is free and starts at zero.
+- Applications and invitations are the default membership policy.
+- Leaders delegate sensitive permissions.
+- Perfect-condition resale is 50%, decreasing linearly to 15%.
+- Dissolution cancels contracts, sells assets, deducts debt and penalties, then divides any positive remainder equally.
+- Initial placement is limited to depots and service tracks.
+- A locomotive and trailing equipment may be purchased as one atomic bundle.
+- No hireable AI driver.
+- Dedicated server support is deferred.
+- Licenses become economic mechanisms rather than vanilla hard gates.
 
-## Risques encore ouverts
+## Open risks
 
-- Atomicité réelle entre wallet, objets Unity, réseau et save lors d’un crash.
-- Exploits économiques par dissolution, recréation ou transferts circulaires.
-- Compatibilité de modules indépendants absents ou de versions différentes.
-- Lifecycle et payout PassengerJobs à confirmer dans Unity et en host/client.
-
-## Preuves encore nécessaires
-
-Les builds et tests headless ne remplacent pas les tests physiques : save/reload, spawn, placement, cleanup, signaux, refuel/repair, navigateur, PassengerJobs, SelfShunt, reconnexion et rollback.
+Runtime crash atomicity, dissolution/transfer exploits, independently versioned module compatibility, and PassengerJobs lifecycle/payout still require Unity and host/client evidence.
 

@@ -1,21 +1,10 @@
-# Contrats et industrie
+# Contracts and industry
 
-Les stations disposent de stocks d’entrée, stocks de sortie, capacités et horloges autoritaires. La production s’arrête par backpressure lorsque la sortie est pleine et reprend après livraison.
+Stations have input stock, output stock, capacity, and an authoritative clock. Production pauses under output backpressure and resumes after delivery.
 
-## Règles d’un contrat
+A contract reserves cargo and destination capacity separately. Its operator assigns compatible owned or leased equipment. Actual loaded and unloaded quantities drive progress; partial deliveries are persistent and idempotent. Completion and cancellation release the consist without destroying it, and exactly one payout reaches the independent operator or company.
 
-- Le cargo est réservé séparément de la capacité de destination.
-- L’operator fournit une rame compatible possédée ou louée.
-- Les quantités réellement chargées et déchargées déterminent la progression.
-- Les livraisons partielles sont persistantes et idempotentes.
-- Completion ou annulation libère la rame sans la détruire.
-- Un payout unique est routé vers le joueur indépendant ou la compagnie operator.
+When strict authority activates, new vanilla job generation is suspended. Existing jobs are inventoried and remain available for cancellation; activation rolls back if an adapter fails or a job disappears.
 
-## Jobs vanilla
-
-Lorsque le mode strict devient autoritaire, les nouvelles générations vanilla sont suspendues. Les jobs déjà ouverts sont inventoriés et doivent rester annulables pendant la migration. L’activation effectue un rollback si un job existant disparaît.
-
-## SelfShunt
-
-Le bridge corrèle l’opération BDVM au job externe, impose une autorité host-only, un payout SelfShunt nul, une progression cumulative monotone et une reprise de production unique.
+The SelfShunt bridge correlates BDVM operations with external jobs, enforces host-only authority, zero SelfShunt payout, monotonic cumulative delivery, and exactly-once production resumption.
 

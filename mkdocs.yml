@@ -1,13 +1,13 @@
 site_name: BDVM Wiki
-site_description: Documentation officielle de Bunchy's Derail Valley Mods
-site_url: https://bunchyearth23.github.io/BDVM-Wiki/
-repo_url: https://github.com/Bunchyearth23/BDVM-Wiki
-repo_name: Bunchyearth23/BDVM-Wiki
+site_description: Official documentation for Bunchy's Derail Valley Mods
+site_url: https://bunchyearth23.github.io/bdvm-wiki/
+repo_url: https://github.com/Bunchyearth23/bdvm-wiki
+repo_name: Bunchyearth23/bdvm-wiki
 edit_uri: edit/main/docs/
 copyright: Copyright © 2026 Bunchy (Bunchyearth23) — Apache-2.0
 theme:
   name: material
-  language: fr
+  language: en
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: bdvm-light
@@ -15,14 +15,14 @@ theme:
       accent: custom
       toggle:
         icon: material/weather-night
-        name: Mode sombre
+        name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: custom
       accent: custom
       toggle:
         icon: material/weather-sunny
-        name: Mode clair
+        name: Switch to light mode
   features:
     - navigation.instant
     - navigation.instant.progress
@@ -35,7 +35,7 @@ theme:
     - content.action.edit
 plugins:
   - search:
-      lang: fr
+      lang: en
 markdown_extensions:
   - admonition
   - attr_list
@@ -57,20 +57,20 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/Bunchyearth23
 nav:
-  - Accueil: index.md
-  - Bien démarrer:
-      - Présentation: getting-started/overview.md
+  - Home: index.md
+  - Getting started:
+      - Overview: getting-started/overview.md
       - Installation: getting-started/installation.md
-      - Première partie: getting-started/first-run.md
-      - Mise à jour et rollback: getting-started/updates.md
+      - First session: getting-started/first-run.md
+      - Updates and rollback: getting-started/updates.md
   - Concepts:
       - Architecture: concepts/architecture.md
-      - Économie et compagnies: concepts/economy.md
-      - Matériel ferroviaire: concepts/fleet.md
-      - Contrats et industrie: concepts/contracts.md
-      - Multiplayer et autorité: concepts/multiplayer.md
+      - Economy and companies: concepts/economy.md
+      - Rolling stock: concepts/fleet.md
+      - Contracts and industry: concepts/contracts.md
+      - Multiplayer authority: concepts/multiplayer.md
   - Modules:
-      - Vue d'ensemble: modules/index.md
+      - Overview: modules/index.md
       - Common: modules/common.md
       - Core: modules/core.md
       - Companies: modules/companies.md
@@ -86,24 +86,23 @@ nav:
       - PassengerJobs Bridge: modules/passengerjobs-bridge.md
       - Full: modules/full.md
   - Forks:
-      - Vue d'ensemble: forks/index.md
+      - Overview: forks/index.md
       - Multiplayer: forks/multiplayer.md
       - SelfShunt: forks/selfshunt.md
       - PassengerJobs: forks/passengerjobs.md
       - Remote Dispatch Live: forks/remote-dispatch.md
-  - Exploitation:
+  - Operations:
       - Configuration: operations/configuration.md
-      - Interface en jeu et Web: operations/interfaces.md
+      - In-game and Web UI: operations/interfaces.md
       - Diagnostics: operations/diagnostics.md
-      - Compatibilité: operations/compatibility.md
-      - Campagne de test: operations/testing.md
-      - Dépannage: operations/troubleshooting.md
-  - Développement:
-      - Build et repositories: development/build.md
-      - Contrats et sécurité: development/contracts.md
+      - Compatibility: operations/compatibility.md
+      - Test campaign: operations/testing.md
+      - Troubleshooting: operations/troubleshooting.md
+  - Development:
+      - Build and repositories: development/build.md
+      - Contracts and safety: development/contracts.md
       - Releases: development/releases.md
-      - Contribution: development/contributing.md
-  - Référence:
-      - Décisions et limites: reference.md
+      - Contributing: development/contributing.md
+  - Reference:
+      - Decisions and limits: reference.md
       - FAQ: faq.md
-

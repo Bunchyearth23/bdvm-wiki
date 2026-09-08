@@ -1,28 +1,16 @@
 # Diagnostics
 
-## Fichiers à collecter
+Collect the complete `Player.log`, `Mods/BDVM.Full/diagnostics`, preflight, checkpoint before/after reload, and relevant screenshots. Record the exact step, UTC time, host/client role, peer ID, correlation ID, job ID, event ID, affected `CarGUID` values, and wallet values before and after a payout.
 
-- `Player.log` complet ;
-- dossier `Mods/BDVM.Full/diagnostics` ;
-- checkpoint avant et après save/reload ;
-- capture avant/après lorsque le problème est visuel ;
-- preflight de la candidate installée.
-
-## Identifiants indispensables
-
-Notez l’étape, l’heure, le rôle host/client, le peer ID, le correlation ID, le job ID, l’event ID, les `CarGUID` et les wallets avant/après. Sans ces identifiants, deux événements similaires peuvent être confondus.
-
-## Lire les logs
-
-| Message | Sens |
+| Log event | Meaning |
 | --- | --- |
-| `composition-ready` | Web/Management enregistrés |
-| `ui-ready` | Interface en jeu disponible |
-| `population-control-disabled` | Mode strict volontairement inactif |
-| `strict-population-control-active` | Tous les gates stricts activés |
-| `activation-refused` | Précondition absente, aucune suppression partielle |
-| `asset-cleanup-protected` | Actif économique exact protégé |
-| `SaveGameData hook: enabled` | Persistance runtime active |
+| `composition-ready` | Web and Management registration succeeded |
+| `ui-ready` | In-game interface is available |
+| `population-control-disabled` | Strict mode is intentionally off |
+| `strict-population-control-active` | All strict gates activated |
+| `activation-refused` | A precondition failed with no partial suppression |
+| `asset-cleanup-protected` | The exact economic asset was protected |
+| `SaveGameData hook: enabled` | Runtime persistence is active |
 
-Ne concluez jamais à partir du seul numéro affiché par UMM : comparez commit, hash SHA-256 et source de l’archive.
+Never rely on UMM's displayed version alone. Match source commit, archive provenance, and SHA-256.
 

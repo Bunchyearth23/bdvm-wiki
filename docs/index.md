@@ -1,38 +1,28 @@
 # BDVM Wiki
 
-BDVM signifie **Bunchy's Derail Valley Mods**. Cette suite transforme Derail Valley en environnement économique modulaire : chaque joueur conserve son portefeuille, les compagnies possèdent leur compte et leur matériel, et l’hôte reste l’unique autorité sur les transactions, contrats et actifs.
+BDVM stands for **Bunchy's Derail Valley Mods**. It is a modular economy and operations suite for Derail Valley: every player keeps a personal wallet, companies own separate accounts and rolling stock, and the host remains authoritative for transactions, contracts, and assets.
 
-<div class="bdvm-status">
-  <div><strong>14</strong>modules indépendants</div>
-  <div><strong>4</strong>forks d’intégration</div>
-  <div><strong>0.3.0</strong>candidate beta actuelle</div>
-  <div><strong>1.0.0</strong>première stable prévue</div>
-</div>
+<div class="bdvm-status"><div><strong>14</strong>independent modules</div><div><strong>4</strong>integration forks</div><div><strong>0.3.0</strong>current beta line</div><div><strong>1.0.0</strong>first planned stable</div></div>
 
-!!! warning "État beta"
-    Les builds actuels sont destinés aux tests sur des saves jetables. Une release beta ne garantit ni migration descendante ni compatibilité avec une save vanilla, un tutoriel ou une ancienne version de DVCompany.
+!!! warning "Beta status"
+    Current builds are intended for disposable test saves. A beta does not guarantee downgrade support or compatibility with tutorial and pre-BDVM careers.
 
-## Choisir son point de départ
+## Start here
 
-- **Joueur** : commencez par [Installation](getting-started/installation.md), puis [Première partie](getting-started/first-run.md).
-- **Administrateur de session** : consultez [Configuration](operations/configuration.md), [Multiplayer et autorité](concepts/multiplayer.md) et [Diagnostics](operations/diagnostics.md).
-- **Développeur de module** : lisez [Architecture](concepts/architecture.md), [Contrats et sécurité](development/contracts.md), puis [Build et repositories](development/build.md).
-- **Testeur** : utilisez la [Campagne de test](operations/testing.md) et joignez les preuves décrites dans [Diagnostics](operations/diagnostics.md).
+- **Players:** [Installation](getting-started/installation.md), then [First session](getting-started/first-run.md).
+- **Session hosts:** [Configuration](operations/configuration.md), [Multiplayer authority](concepts/multiplayer.md), and [Diagnostics](operations/diagnostics.md).
+- **Module developers:** [Architecture](concepts/architecture.md), [Contracts and safety](development/contracts.md), and [Build and repositories](development/build.md).
+- **Testers:** [Test campaign](operations/testing.md) and [Diagnostics](operations/diagnostics.md).
 
-## Principes non négociables
+## Core rules
 
-1. L’hôte valide toute mutation économique.
-2. Une transaction indique explicitement le wallet débité et crédité.
-3. Le matériel est identifié par `CarGUID`, jamais par proximité ou numéro visible.
-4. Les UI en jeu et Web affichent le state et envoient des intentions ; elles ne calculent aucune autorité.
-5. Un module absent ou incompatible échoue fermé sans supprimer son payload persistant.
-6. Aucun contrat ne crée gratuitement les wagons nécessaires à son exécution.
-7. Aucun conducteur IA n’est recrutable ; l’automatisation reste limitée aux aides de triage autorisées.
+1. The host validates every economic mutation.
+2. Every transaction names its source and destination account.
+3. Rolling stock is identified by `CarGUID`, never proximity or visible number.
+4. In-game and Web interfaces display state and send intents; they do not calculate authority.
+5. Missing or incompatible modules fail closed while their persistent payload remains preserved.
+6. Contracts never create free rolling stock.
+7. No AI driver can be hired; automation is limited to authorized planning assistance.
 
-## Repositories essentiels
-
-- [BDVM Full](https://github.com/Bunchyearth23/bdvm-full) — bundle complet.
-- [Organisation des modules](modules/index.md) — rôle et dépendances de chaque package.
-- [Forks BDVM](forks/index.md) — provenance, licences et compatibilité.
-- [Toutes les releases GitHub](https://github.com/orgs/Bunchyearth23/repositories?q=bdvm) — sources et archives publiques.
+Main repository: [BDVM Full](https://github.com/Bunchyearth23/bdvm-full).
 

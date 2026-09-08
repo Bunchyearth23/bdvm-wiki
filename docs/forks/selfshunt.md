@@ -1,8 +1,6 @@
-# Fork SelfShunt
+# SelfShunt fork
 
-Le fork [Bunchyearth23/DV-SelfShunter](https://github.com/Bunchyearth23/DV-SelfShunter) part de la révision upstream `329c85cf51715404af3b4d455239d9fc54f5ac5b` de [Chump-the-Lump/DV-SelfShunter](https://github.com/Chump-the-Lump/DV-SelfShunter).
+[Bunchyearth23/DV-SelfShunter](https://github.com/Bunchyearth23/DV-SelfShunter) is based on [Chump-the-Lump/DV-SelfShunter](https://github.com/Chump-the-Lump/DV-SelfShunter) revision `329c85cf51715404af3b4d455239d9fc54f5ac5b`.
 
-Il expose `SelfShunt.API` pour contrôler les nouvelles générations, enregistrer des jobs externes host-only, corréler leur lifecycle, imposer un payout observé nul et reprendre la production sans reflection sur les types internes.
-
-La permission de fork confirmée exige de conserver le crédit `Chump_the_Lump`, le lien upstream et la révision de base. Elle ne doit pas être présentée comme une licence open source conventionnelle.
+It exposes SelfShunt.API for generator control and host-only external jobs without reflection over internal types. The documented fork permission requires visible credit to `Chump_the_Lump`, the upstream link, and the base revision; it is not represented as a conventional open-source license.
 

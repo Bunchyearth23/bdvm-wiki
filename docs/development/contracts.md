@@ -1,14 +1,8 @@
-# Contrats et sécurité
+# Contracts and safety
 
-## Commandes
+A mutating command contains actor, operation ID, expected state version, bounded payload, and correlation ID. The authority reloads state, validates permission and transition, then records an idempotent result.
 
-Une commande mutante contient au minimum acteur, operation ID, version attendue, payload borné et correlation ID. L’autorité recharge le state, valide permission et transition, puis produit un résultat idempotent.
+Unity objects, wallets, network state, and saves do not share an ACID transaction. BDVM uses intent-before-effect persistence, pending transitions, idempotent external effects, reconciliation, and compensation.
 
-## Atomicité
-
-Unity, wallet, réseau et save ne partagent pas une transaction ACID. BDVM utilise intention persistée avant effet, transitions `pending`, opérations externes idempotentes, réconciliation et compensation. Un crash ne doit ni créer d’argent ni perdre silencieusement un actif.
-
-## Bridges
-
-Les bridges ne lisent pas les types internes par reflection lorsque l’API publique nécessaire existe. Toute API absente, version incompatible, exception, payout non nul inattendu ou progression régressive entraîne un refus corrélé.
+Bridges use supported public APIs instead of reflecting over internal types. Missing APIs, incompatible versions, exceptions, unexpected non-zero payouts, or regressive progress fail closed with correlated logs.
 

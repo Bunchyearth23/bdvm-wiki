@@ -1,11 +1,6 @@
 # Releases
 
-## Canaux
+Beta releases are validation builds. Stable releases begin at `1.0.0` only after the complete runtime matrix passes. Every release provides its archive, SHA-256 manifest, notices, and provenance; Full also provides a preflight.
 
-- `beta` : validation, saves jetables, aucune garantie stable.
-- `1.0.0` et suivantes : stable uniquement après matrice runtime complète.
-
-Chaque release contient une archive, un manifeste SHA-256 et les notices applicables. Full ajoute un preflight. Les workflows peuvent être déclenchés manuellement pour préparer une release, mais une archive n’est publiée qu’après validation des dépendances et de la provenance.
-
-Une release déjà publiée reste immuable. Toute correction produit une nouvelle beta coordonnée.
+Manual release workflows validate build and distribution. Published releases are immutable: corrections receive a new coordinated beta instead of replacing old assets.
 

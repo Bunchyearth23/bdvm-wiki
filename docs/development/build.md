@@ -1,16 +1,8 @@
-# Build et repositories
+# Build and repositories
 
-Les modules ciblent .NET Framework 4.8 (`net48`). Les builds d’intégration nécessitent les assemblies de Derail Valley, Unity Mod Manager et les APIs tierces correspondant aux forks.
+Modules target .NET Framework 4.8 (`net48`). Integration builds require Derail Valley, Unity Mod Manager, and API assemblies from the matching forks.
 
-## Règles de repository
+Every module has a public repository, Apache-2.0 license, README, `module.json`, compatibility file, NOTICE, CI, and provenance. Game assemblies and downloaded third-party DLLs are never committed.
 
-- Un repository public par module.
-- Licence Apache-2.0 pour le code BDVM.
-- README, `module.json`, `COMPATIBILITY.md`, `LICENSE` et `NOTICE` dans chaque package.
-- Provenance et licence upstream visibles pour tout code réutilisé.
-- Aucune DLL téléchargée ou assembly de jeu commitée.
-
-## Validation minimale
-
-Le build de la solution, les tests domaine/modularité, les tests du module, l’audit de dépendances, la matrice de packages et `diff --check` doivent réussir avant publication.
+Before release, run the solution build, domain and modularity tests, module tests, dependency audit, package matrix, and whitespace check.
 

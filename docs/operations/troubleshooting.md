@@ -1,22 +1,22 @@
-# Dépannage
+# Troubleshooting
 
-## BDVM charge mais reste en mode sûr
+## BDVM loads in safe mode
 
-Cherchez `Runtime settings refused`. Une configuration invalide désactive volontairement les hooks. Corrigez le JSON hors jeu, réinstallez puis relancez. Pour la policy de population actuelle, `source` doit être un enum numérique.
+Find `Runtime settings refused`. Fix the JSON while the game is closed, reinstall, and relaunch. Current population-policy enums must be numeric.
 
-## Un bridge est indisponible
+## A bridge is unavailable
 
-Vérifiez le mod d’origine, son API, la version attendue et l’ordre de chargement. Installer uniquement `BDVM.SelfShuntBridge` ou `BDVM.PassengerJobsBridge` ne fournit pas SelfShunt ou PassengerJobs.
+Verify the original mod, its API, supported version, and load order. Installing a bridge does not install SelfShunt, PassengerJobs, Multiplayer, or RemoteDispatchLive.
 
-## Un client peut voir mais pas agir
+## A client can view but not act
 
-C’est le comportement fail-closed lorsque l’identité, l’autorité ou la version attendue n’est pas prouvée. Comparez les rapports host/client et les versions de protocole.
+This is expected fail-closed behavior when identity, authority, or version cannot be proven. Compare host/client diagnostics.
 
-## Un train a été débité mais n’apparaît pas
+## Money was removed but no train appeared
 
-Ne recliquez pas en boucle. Relevez l’operation ID et le state `pending`, puis utilisez la réconciliation. Une compensation ou un retry idempotent doit terminer l’opération.
+Do not click repeatedly. Record the operation ID and pending state, then reconcile. Retry and compensation paths must be idempotent.
 
-## Convois ou cabooses abandonnés
+## Abandoned consists or cabooses
 
-Séparez AI Traffic, jobs vanilla et actifs BDVM. Un signal vert n’implique pas que BDVM a créé ou gouverné l’obstacle. Relevez son `CarGUID`, son owner et les logs de sa source/cleanup avant toute conclusion.
+Separate AI Traffic, vanilla jobs, and BDVM assets. Record `CarGUID`, owner, spawn source, and cleanup logs before attributing the obstruction.
 

@@ -1,38 +1,20 @@
 # Configuration
 
-Le fichier `Mods/BDVM.Full/runtime-settings.json` active les capabilities de la composition complète. Toute erreur de parsing applique les safe defaults : hooks économiques et save désactivés, aucune mutation partielle.
+`Mods/BDVM.Full/runtime-settings.json` controls the complete runtime. Any parse or validation error applies safe defaults: save and economy hooks remain disabled and no partial mutation is registered.
 
-## Flags principaux
-
-| Flag | Effet |
+| Flag | Purpose |
 | --- | --- |
-| `enableSaveGameDataHook` | Persistance BDVM dans la save |
-| `enableWalletBridge` | Raccord au wallet vanilla autoritaire |
-| `enableMultiplayerProtocol` | Transport host/client |
-| `enableCompanyGovernance` | Invitations, candidatures et permissions |
-| `enableFleetManagement` | Ownership, bundles et états |
-| `enableFiniteMarket` | Catalogue, disponibilité et quotes |
-| `enableIndustrialPilot` | Industrie BDVM |
-| `enablePassengerEconomy` | Domaine voyageurs |
-| `enableAssetLifecycle` | Protection et cleanup ciblé |
-| `enableStrictWorldPopulation` | Contrôle des sources de spawn |
-| `verboseLogging` | Logs de diagnostic détaillés |
+| `enableSaveGameDataHook` | Persist BDVM state in the save |
+| `enableWalletBridge` | Connect the authoritative vanilla wallet |
+| `enableMultiplayerProtocol` | Enable host/client transport |
+| `enableCompanyGovernance` | Membership and permission workflows |
+| `enableFleetManagement` | Ownership, bundles, and service states |
+| `enableFiniteMarket` | Catalog inventory and quotes |
+| `enableIndustrialPilot` | BDVM industry runtime |
+| `enablePassengerEconomy` | Passenger domain |
+| `enableAssetLifecycle` | Targeted cleanup protection |
+| `enableStrictWorldPopulation` | Govern rolling-stock spawn sources |
+| `verboseLogging` | Detailed correlated diagnostics |
 
-## Mode strict
-
-Ne l’activez que si `enableSaveGameDataHook` est vrai, que l’instance est autoritaire, qu’une nouvelle carrière non tutorielle est chargée et qu’au moins un dépôt ou rail de service réel est configuré. Les enums de `worldPopulationPolicy.rules[].source` sont sérialisés numériquement par le serializer .NET Framework utilisé actuellement.
-
-| Valeur | Source |
-| ---: | --- |
-| 0 | PurchasedDelivery |
-| 1 | LeasedDelivery |
-| 2 | StarterDelivery |
-| 3 | RecoveryRequired |
-| 4 | ExternalTraffic |
-| 5 | NaturalLocomotive |
-| 6 | ContractProvidedVehicle |
-| 7 | UnsupportedTutorial |
-| 8 | Unknown |
-
-Une source inconnue ou une policy incomplète échoue fermé.
+Strict population control also requires the save hook, an authoritative host, a new non-tutorial career, and at least one validated depot or service track. The current .NET serializer represents `worldPopulationPolicy.rules[].source` numerically: 0 purchased, 1 leased, 2 starter, 3 recovery, 4 external traffic, 5 natural locomotive, 6 contract-provided vehicle, 7 unsupported tutorial, and 8 unknown.
 

@@ -1,8 +1,6 @@
 # BDVM.PassengerJobsBridge
 
-[Repository](https://github.com/Bunchyearth23/bdvm-passengerjobs-bridge) · Version 1.1.0 · Runtime : fork PassengerJobs, PassengerJobs.API, DVLangHelper
+[Repository](https://github.com/Bunchyearth23/bdvm-passengerjobs-bridge) · 1.1.0 · Runtime: BDVM PassengerJobs fork, PassengerJobs.API, and DVLangHelper
 
-Le bridge consomme l’API versionnée du fork BDVM et convertit les événements available, taken, completed et abandoned en transitions idempotentes. Le payout est lu et crédité une seule fois par l’autorité BDVM.
-
-`BDVM.Passengers` reste indépendant ; ce bridge n’est pas autonome et ne copie aucun code PassengerJobs.
+Consumes the fork's versioned API and maps available, taken, completed, and abandoned events to idempotent domain transitions. The host reads and credits each payout exactly once. No PassengerJobs source is copied into this bridge.
 

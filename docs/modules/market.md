@@ -1,8 +1,6 @@
 # BDVM.Market
 
-[Repository](https://github.com/Bunchyearth23/bdvm-market) · Version 1.2.0 · Dépendances : Common, Companies, Fleet
+[Repository](https://github.com/Bunchyearth23/bdvm-market) · 1.2.0 · Requires Common, Companies, and Fleet
 
-Market fournit catalogue, offre finie, quotes, achat, revente, locations et économie dynamique. Une quote fige prix et conditions pendant sa durée. Offre, demande et utilisation modifient les prix dans des bornes lissées.
-
-La revente utilise 50 % en parfait état puis une décroissance linéaire jusqu’au plancher de 15 %.
+Provides finite catalogs, quotes, purchase, resale, inbound/outbound leasing, and bounded dynamic pricing. Quotes freeze price and conditions. Resale starts at 50% in perfect condition and decreases linearly to a 15% floor.
 

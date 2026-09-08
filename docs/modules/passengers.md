@@ -1,8 +1,6 @@
 # BDVM.Passengers
 
-[Repository](https://github.com/Bunchyearth23/bdvm-passengers) · Version 1.0.0 · Dépendances : Common, Operations
+[Repository](https://github.com/Bunchyearth23/bdvm-passengers) · 1.0.0 · Requires Common and Operations
 
-Passengers modélise demande origine/destination, capacité, ponctualité, fréquence et rémunération voyageurs sans dépendre de PassengerJobs. Le domaine reste utilisable avec un autre adapter.
-
-L’intégration jouable actuelle passe par `BDVM.PassengerJobsBridge`.
+Models origin/destination demand, capacity, punctuality, frequency, and passenger rewards without depending on PassengerJobs. The current playable adapter is PassengerJobsBridge, but another adapter may implement the same domain contract.
 
