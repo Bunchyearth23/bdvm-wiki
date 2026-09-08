@@ -24,3 +24,4 @@ For initial testing, use **BDVM Full** with the matching BDVM builds of its four
 
 Profiles: **minimal** and **economic** have no external runtime dependency; **dispatcher** requires RemoteDispatchLive; **complete** requires all integrations listed above.
 
+Optional signalling, map, presentation, realism, and rolling-stock mods are not bundled with BDVM. See the [optional-mod compatibility catalog](../mods/optional-mods.md) before adding them to a validation profile.

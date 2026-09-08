@@ -91,6 +91,8 @@ nav:
       - SelfShunt: forks/selfshunt.md
       - PassengerJobs: forks/passengerjobs.md
       - Remote Dispatch Live: forks/remote-dispatch.md
+  - Optional mods:
+      - Compatibility catalog: mods/optional-mods.md
   - Operations:
       - Configuration: operations/configuration.md
       - In-game and Web UI: operations/interfaces.md
