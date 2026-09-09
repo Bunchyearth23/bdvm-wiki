@@ -1,6 +1,6 @@
 # BDVM Wiki
 
-Source du wiki officiel de **Bunchy's Derail Valley Mods**, publié avec MkDocs Material sur GitHub Pages.
+Source repository for the official **Bunchy's Derail Valley Mods** wiki, published with MkDocs Material on GitHub Pages.
 
 ## Local development
 
