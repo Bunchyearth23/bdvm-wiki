@@ -96,6 +96,7 @@ nav:
   - Operations:
       - Configuration: operations/configuration.md
       - In-game and Web UI: operations/interfaces.md
+      - Management advanced options: operations/management-advanced.md
       - Diagnostics: operations/diagnostics.md
       - Compatibility: operations/compatibility.md
       - Test campaign: operations/testing.md
