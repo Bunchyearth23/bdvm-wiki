@@ -4,9 +4,29 @@ The normal Management workflow uses guided buttons and named choices. Open **Adv
 
 Identifiers remain visible for diagnostics and interoperability, but the interface shows the human-readable name first. Never change an identifier merely to rename something.
 
+## Buying and running the first freight job
+
+1. Keep the loaded game running. Once a delivery depot is known, the catalog prepares finite offers for resolved installed models.
+2. Open **Catalog**, review the model and quoted price, then choose **Buy**. Select company payment only when its wallet is funded.
+3. Open **Deliveries**. In the game, use the BDVM delivery radio: **Start**, select the vehicle, aim at a permitted track, choose its direction and confirm.
+4. In **Fleet**, verify its track. If its operational availability is **Stored**, choose **Make available for work**. Physical presence and operational availability are separate.
+5. Open **Industry**, choose an offer showing its stations, cargo and payment, then accept it for yourself or your company.
+6. Tick compatible wagons and assign them. Choose **Start loading job**, then perform the physical loading, journey and unloading in the game.
+7. Choose **Check delivery and payment**. Payment requires confirmed physical delivery; retrying cannot create a second payout.
+
+The first industrial chain is discovered from loaded warehouses. It is not a complete preconfigured simulation of every station. If no pair supports your wagons, visit another station and retry. Existing stock is never refilled by repeating discovery.
+
+## Default catalog policy
+
+Newly discovered, uniquely resolved models receive three units of virtual stock at a known delivery depot. Default base prices are $40,000 for the DE2, $150,000 for other locomotives, $20,000 for passenger cars and $10,000 for freight wagons. These are initial balancing values, not real-world valuations. Existing host configuration is preserved.
+
+The market factor ranges from 0.8 to 1.2; the displayed offer is the actual quoted purchase price. Default transfer fee is zero and the perfect-condition buyback rate is 50%. Offers are generated from remaining stock, which is not replenished by reloading the save. Buying does not spawn the vehicle: it grants its one-time delivery.
+
+Catalog and industry discovery is checked every 60 active economy ticks. A paused game does not advance this process. **Advanced host setup** retains manual catalog registration and industry configuration for server owners.
+
 ## Industry: recommended first setup
 
-Use **Discover stations and configure a personal pilot chain** or its company equivalent whenever possible.
+During active gameplay, BDVM prepares the first compatible chain when available freight wagons and two suitable loaded warehouses exist. If needed, use **Find transport work for my wagons** or its company equivalent.
 
 1. Select one or more available freight wagons.
 2. Confirm the action.
@@ -78,7 +98,7 @@ The origin, destination, cargo, quantity, reward, deadline, wagon count, capacit
 
 ## Passenger routes
 
-The guided action **Create a passenger route** generates the internal route identifier from the chosen stations.
+The guided action **Open a passenger route** asks only for departure and arrival, generates the internal identifier and applies standard demand and fare settings. **Configure passenger route**, under advanced setup, exposes the parameters below.
 
 | Option | Meaning |
 | --- | --- |
