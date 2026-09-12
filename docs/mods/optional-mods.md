@@ -15,7 +15,7 @@ Status terms used here:
 | Mod | Function | BDVM value | Status and requirements |
 | --- | --- | --- | --- |
 | **DVLangHelper** | Shared localization runtime. | Required transitively by PassengerJobs and used by several content frameworks. | **Supported dependency.** Keep the version required by the coordinated PassengerJobs package. |
-| **DVSignals** | Functional signalling framework and signal packs. | High value for Dispatch route safety and signal-aspect views; it has no economic authority. | **Compatible option.** Load with DVLangHelper. Validate signals after the minimal profile and again with Multiplayer. |
+| **DVSignals** | Functional signalling framework and signal packs. | High value for Dispatch route safety and signal-aspect views; it has no economic authority. | **Supported and recommended option.** Keep enabled in the development profile with DVLangHelper; it is not a BDVM dependency. |
 | **DVCustomCarLoader (CCL)** | Loads custom locomotives, wagons, passenger cars, and definitions. | Enables a larger finite catalog and multi-component asset tests. | **Validation option.** Needed only when at least one CCL vehicle is installed. Every livery and bundle still needs runtime validation. |
 | **DVCustomLicenses** | Registers licenses requested by custom vehicles or cargo. | Conflicts conceptually with BDVM's economic-license model when used as a vanilla hard gate. | **Quarantined.** Install only for content that cannot yet remove the requirement; BDVM must not duplicate the charge or hard gate. |
 | **SkinManagerMod** | Applies skins and liveries; integrates with CCL, Multiplayer, and PassengerJobs. | Preserves visual customization of owned assets. | **Compatible option.** Set `allowPaintingUnowned` to false so ownership remains meaningful. Multiplayer may log a transient early integration error before its successful second pass. |
@@ -24,7 +24,7 @@ Status terms used here:
 
 | Mod | Function | BDVM interaction | Status |
 | --- | --- | --- | --- |
-| **DoubleTrack** (sometimes called Dual Tracks) | Adds doubled track geometry and Multiplayer integration. | Remote Dispatch understands its geometry, but map changes may invalidate persisted track IDs used for delivery and contracts. | **Validation option.** Add only after depot/service-track placement works on the base map; repeat track-ID and save/reload tests. |
+| **DoubleTrack** (sometimes called Dual Tracks) | Adds doubled track geometry and Multiplayer integration. | Remote Dispatch understands its geometry, but map changes may invalidate persisted track IDs used for delivery and contracts. | **Supported and recommended option.** Keep enabled in the development profile; it is not a BDVM dependency. Repeat track-ID and save/reload tests after map changes. |
 | **DV Level Crossings** | Animated barriers, lights, and bells. | Immersive safety feature with no known economic writes. | **Compatible option.** Add after the minimal profile. |
 | **DVTrafficOverlay** | Local/VR view of tracks, consists, capacities, limits, and shunting. | Useful diagnostic fallback; overlaps visually with Dispatch but does not replace its authority. | **Compatible option during development.** Keep `JobFocus` disabled while isolating job lifecycle issues. |
 | **WagonDestination** | Displays a job wagon's final station or track. | Useful with vanilla and PassengerJobs flows; may become redundant with Management contract views. | **Compatible option.** Re-evaluate after the full contract UI is validated. |
@@ -67,8 +67,8 @@ Status terms used here:
 
 ## Recommended activation order
 
-1. Validate BDVM Full and its required forks only.
-2. Add DVSignals and diagnostic overlays.
+1. Validate BDVM Full and its required forks with DVSignals and DoubleTrack enabled.
+2. Add diagnostic overlays.
 3. Add CCL with FPD4 and Passenger Cars.
 4. Add EMC E-Series as the first multi-component bundle.
 5. Add SkinManager and Number Manager.
