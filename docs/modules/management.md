@@ -1,5 +1,7 @@
 # BDVM.Management
 
+The prepared 14 September candidate adds a grouped industrial Contracts workspace with independent dossiers, wagon filtering/selection, retained drafts and sequential reconciliation. See the [workflow and candidate status](../operations/industrial-dossiers.md).
+
 [Repository](https://github.com/Bunchyearth23/bdvm-management) · 1.3.0 · Runtime: Web
 
 Exposes companies, wallets, fleet, market, leases, contracts, industry, passengers, financing, and yard planning. Views consume authoritative snapshots; controls send versioned intents. Destructive actions require confirmation.

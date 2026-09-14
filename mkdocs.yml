@@ -96,6 +96,7 @@ nav:
   - Operations:
       - Configuration: operations/configuration.md
       - In-game and Web UI: operations/interfaces.md
+      - Industrial dossiers: operations/industrial-dossiers.md
       - Management advanced options: operations/management-advanced.md
       - Diagnostics: operations/diagnostics.md
       - Compatibility: operations/compatibility.md
@@ -104,6 +105,8 @@ nav:
   - Development:
       - Build and repositories: development/build.md
       - Contracts and safety: development/contracts.md
+      - Unity work and persistence: development/unity-persistence.md
+      - Candidate 2026-09-14: development/candidate-2026-09-14.md
       - Releases: development/releases.md
       - Contributing: development/contributing.md
   - Reference:

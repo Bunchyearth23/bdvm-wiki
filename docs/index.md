@@ -9,6 +9,8 @@ BDVM stands for **Bunchy's Derail Valley Mods**. It is a modular economy and ope
 
 ## Start here
 
+The 14 September development candidate moves industrial dossiers into Management → Contracts and adds wagon cargo/tag indicators in Dispatch. Read the [workflow](operations/industrial-dossiers.md) and [validation status](development/candidate-2026-09-14.md) before testing; this candidate has not been installed.
+
 - **Players:** [Installation](getting-started/installation.md), then [First session](getting-started/first-run.md).
 - **Session hosts:** [Configuration](operations/configuration.md), [Multiplayer authority](concepts/multiplayer.md), and [Diagnostics](operations/diagnostics.md).
 - **Module developers:** [Architecture](concepts/architecture.md), [Contracts and safety](development/contracts.md), and [Build and repositories](development/build.md).
@@ -25,4 +27,3 @@ BDVM stands for **Bunchy's Derail Valley Mods**. It is a modular economy and ope
 7. No AI driver can be hired; automation is limited to authorized planning assistance.
 
 Main repository: [BDVM Full](https://github.com/Bunchyearth23/bdvm-full).
-
